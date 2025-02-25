@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light Mode */
+  --color-offwhite: #f9f6f1;
+  --color-w-bg: #fffdf4f5;
+  --color-w-brown: #4c4217;
+  --color-w-gold: #dfbd42;
+  --color-w-border: rgba(0, 0, 0, 0.4);
+
+  /* Dark Mode */
+  --color-d-bg: #000000f5;
+  --color-d-brown: #d4af37;
+  --color-d-gold: #ffcc00;
+  --color-d-border: rgba(255, 255, 255, 0.4);
+}
