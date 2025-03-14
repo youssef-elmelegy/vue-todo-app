@@ -271,6 +271,34 @@ const filteredTasks = computed(() => {
           +
         </button>
       </div>
+
+      <!-- Edit Modal -->
+      <div
+        v-if="isEditing"
+        class="fixed top-0 left-0 w-full h-full bg-w-border bg-opacity-50 flex items-center justify-center"
+      >
+        <div class="bg-w-bg p-4 rounded-lg w-96">
+          <input
+            v-model="editText"
+            type="text"
+            class="w-full px-4 py-2 border border-w-border rounded-md focus:outline-none"
+          />
+          <div class="flex justify-end mt-4 text-white">
+            <button
+              @click="isEditing = false"
+              class="p-2 rounded-md bg-w-border mx-2 dark:bg-d-border"
+            >
+              Close
+            </button>
+            <button
+              @click="updateTask"
+              class="bg-w-gold text-white px-4 py-2 rounded-md"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
